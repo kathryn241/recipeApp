@@ -2,7 +2,7 @@ Dear Project Manager,
 
 Here's the recipe app you requested.
 
-I've created a prototype, it's available here to view:
+I've created a prototype, it's available here to view: http://kathryn241.github.io/recipeApp
 
 Nearly all the functional requirements are covered off (17/19), so it will be great to get some feedback before the next iteration of development.
 
