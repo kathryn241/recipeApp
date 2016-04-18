@@ -86,5 +86,5 @@ User Experience
 
 Development tasks:
 - [ ] add run-sequence + livereload to Gulp tasks and tidy up.
-- [ ] concatenate + minify external Bower dependancies so all loaded together
+- [ ] concatenate + minify external Bower dependancies so all loaded together. Don't need all the files under /dist/bower_components... need a clear out so only taking core dependancy files.
 - [ ] create change log and readme for new developers
