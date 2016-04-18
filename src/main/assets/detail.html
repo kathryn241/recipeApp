@@ -1,0 +1,44 @@
+<div class="detailContainer" ng-hide="detail.error">
+    <div class="row">
+        <h1>{{detail.recipe.name}}</h1>
+        <div class="col-md-4">
+            <img ng-src="{{detail.recipe.image}}">
+        </div>
+        <div class="col-md-8">
+            <section class="recipeSummary"><p>{{detail.recipe.summary}}</p></section>
+        </div>
+    </div>
+    <div class="row">
+    <div class="col-sm-4">
+        <section class="recipeIngredients">
+            <h3>Ingredients</h3>
+            <div ng-repeat="ingredients in detail.recipe.ingredients">
+                <ul ng-hide="ingredients.group">
+                    <li>{{ingredients}}</li>
+                </ul>
+                <span class="ingredientsGroup" ng-show="ingredients.group">{{ingredients.group}}</span>
+                    <ul>
+                        <li ng-repeat="ingredient in ingredients.ingredients">{{ingredient}}</li>
+                    </ul>
+            </div>
+        </section>
+    </div>
+    <div class="col-sm-8">
+        <section class="recipeMethod">
+            <h3>Preparation method</h3>
+            <ol>
+                <li ng-repeat="step in detail.recipe.method">
+                    {{step}}
+                </li>
+            </ol>
+        </section>
+    </div>
+    </div>
+    <div class="row">
+        <div class="back" ui-sref="recipes({filtered: detail.filteredCriteria})"><< Go back</div>
+    </div>
+</div>
+<div class="detailContainer" ng-show="detail.error">
+    <p class="error">{{detail.error}}</p>
+    <p>View all recipes <a ui-sref="recipes">here</a>.</p>
+</div>

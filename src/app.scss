@@ -1,0 +1,105 @@
+/***** COLOUR PALETTE *******/
+$black: #000000;
+$mediumGrey: #dcdcdc;
+$red: #B00000;
+$lightGrey: #F0F0F0;
+$blue: #3300CC;
+
+/***** GENERAL *******/
+
+* {
+  font-family: "Calibri Light", Courier, monospace;
+}
+
+.footer p {
+    float: right;
+    display: block;
+    font-size: 80%;
+    margin-top: 0;
+}
+
+/***** MAIN LIST PAGE *******/
+
+.listHeader {
+  background-color: $mediumGrey;
+  overflow: auto;
+  h3 {
+    display: inline;
+    padding-right: 20px;
+  }
+}
+
+.orderOption {
+  float: right;
+  display: block;
+}
+
+.error {
+  background-color: $red;
+  margin: 0;
+  padding: 5px;
+  display: block;
+}
+
+.listContainer {
+  div {
+    padding: 5px;
+  }
+  ol {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  li {
+    padding: 5px;
+    overflow: auto;
+    border-bottom: 1px solid $mediumGrey;
+  }
+}
+
+/***** INDIVIDUAL RECIPE LISTING *******/
+
+.recipeName, .recipeTime {
+  float: left;
+  padding-left: 20px;
+  display: block;
+}
+
+.listContainer img, .recipeImage {
+  float: left;
+}
+
+@media screen and (min-width: 300px) {
+  .recipeTime {
+    float: right;
+  }
+}
+
+.recipeList li:hover {
+  background-color: $lightGrey;
+}
+
+.listContent {
+  //background-color: #ffffff;
+}
+/*****  DETAIL PAGE  *******/
+
+.detailContainer h1, .row {
+  border-bottom: 1px solid #dcdcdc;
+  padding-bottom: 10px;
+}
+
+.detailContainer img {
+  width: 100%;
+  max-width: 448px;
+}
+
+.ingredientsGroup {
+  font-weight: bold;
+}
+
+.back {
+  padding: 5px;
+  background-color: $lightGrey;
+  text-decoration: underline;
+}

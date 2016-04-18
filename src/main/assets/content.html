@@ -1,0 +1,28 @@
+<div class="listContainer">
+    <div class="listHeader row">
+        <div class="col-xs-12">
+            <form name="filterForm">
+                <h3>Recipes</h3>
+                <input name="filterTerm" ng-model="main.searchText" placeholder="Filter recipes" ng-pattern="/[A-z]/">
+                <button ng-click="main.clearFilter()">X</button>
+            </form>
+            <span class="orderOption" ng-click="main.orderByTime()">Order by cooking time</span>
+
+            <p class="error" ng-show="filterForm.filterTerm.$error.pattern">Please enter a valid filter.</p>
+        </div>
+    </div>
+    <div class="listContent row">
+        <ol class="recipeList">
+            <span ng-repeat="recipe in filteredRecipes = (main.recipeList | orderBy: main.orderedList | filter: main.searchText)">
+                <a ui-sref=".detail({id: recipe.id, filtered: main.searchText})">
+                <li class="col-sm-6 col-md-4">
+                    <span class="recipeImage"><img ng-src="{{recipe.image}}"></span>
+                    <span class="recipeName">{{recipe.name}}</span>
+                    <span class="recipeTime"> {{recipe.cookingTime}} minutes </span>
+                </li>
+            </a>
+            </span>
+            <span ng-hide="filteredRecipes.length">Sorry, we currently have no recipes for you.</span>
+        </ol>
+    </div>
+</div>
