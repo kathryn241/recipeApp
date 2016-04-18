@@ -33,6 +33,12 @@ Protractor | Test Framework (Browser Based Tests)
   2. Run the app locally by running 'gulp run'. You should now be able to access it in your browser from http://localhost:8888
   3. To see other available gulp tasks, run 'gulp help' or take a look in the gulpfile.js.
 
+### Browsing the code:
+/src --> source code. Nice and readable. 
+/dist --> production, 'built' code. Minified so less readable.
+/test --> test cases. The directory structure should match with /src so you can easily find the tests for each js file.
+gulpfile.js --> have a look at the different gulp tasks you can run.
+
 ## Scenarios completed:
 AS A user I WANT to find recipes SO THAT I can get inspiration for cooking
 - [x] Scenario: No recipes available
