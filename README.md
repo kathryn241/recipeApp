@@ -10,9 +10,6 @@ It does need some further work though to get "production ready" (tasks listed be
 
 Let me know if you have any issues viewing the app, will be happy to take you through it.
 
-Best wishes,
-Kathryn
-
 
 ## Tech details:
 This app sounds like it would be a component in an existing website/ application - so it would probably be most efficient to use the existing tech stack, and house-styles. For now it's made with the use of AngularJS, so it can be easily tested and picked up by new developers.
